@@ -1,0 +1,41 @@
+.sentMail {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  &-link {
+    text-decoration: none;
+  }
+  &-item {
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.288);
+    :nth-child(n) {
+      margin: 0.5rem;
+    }
+    &-to {
+      flex: 2;
+    }
+    &-from {
+      flex: 2;
+      display: flex;
+      align-items: flex-start;
+    }
+    &-msgContainer {
+      flex: 6;
+      white-space: pre-line;
+      position: relative;
+    }
+    &-msg {
+      color: transparent;
+      height: 0;
+      &:before {
+        content: attr(preview);
+        display: unset;
+        position: absolute;
+        color: grey;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

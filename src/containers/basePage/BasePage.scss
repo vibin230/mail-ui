@@ -1,0 +1,12 @@
+.base {
+  display: flex;
+  height: 100%;
+  &-nav {
+    flex: 1;
+    border-right: 1px solid grey;
+  }
+  &-content {
+    flex: 5;
+    position: relative;
+  }
+}

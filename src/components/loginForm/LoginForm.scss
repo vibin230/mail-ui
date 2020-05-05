@@ -1,0 +1,71 @@
+$loginFormShadow: -0.3rem 0.3rem 0.6rem 0 #bdbdbd, inset 0 0rem 0.1rem 0 #bdbdbd;
+$buttonActive: -0.2rem 0.2rem 0.4rem 0 #bdbdbd, inset 0 0rem 0.1rem 0 #bdbdbd;
+
+.login {
+  &-container {
+    min-height: 100vh;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-box {
+    box-shadow: $loginFormShadow;
+    border-radius: 0.8rem;
+    width: fit-content;
+  }
+  &-inputAlignment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+  }
+  &-inputLabelContainer {
+    font-size: 1.2rem;
+    width: fit-content;
+    margin: 1rem;
+  }
+  &-inputLabel {
+    display: flex;
+  }
+  &-inputStyle {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 0rem;
+    border-bottom: 1px solid blue;
+    &:focus {
+      outline: 0rem;
+      border-bottom: 1px solid red;
+    }
+  }
+}
+.linkButton {
+  border: 0;
+  background-color: #609ced;
+  box-shadow: $loginFormShadow;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 0.3rem;
+  &:active {
+    transform: translateY(2px);
+    box-shadow: $buttonActive;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+.newUser {
+  &-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  &-button {
+    border: 0;
+    background-color: transparent;
+    color: #609ced;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+}
